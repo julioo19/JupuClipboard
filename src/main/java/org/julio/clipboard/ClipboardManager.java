@@ -20,8 +20,8 @@ public class ClipboardManager {
         clientClipboard.setContents(imageSelection, null);
     }
     public synchronized void setClipboard(String messageToClipboard){
-        StringSelection stringSelection = new StringSelection(messageToClipboard);
-        clientClipboard.setContents(stringSelection, null);
+        HTMLSelection htmlSelection = new HTMLSelection(messageToClipboard, messageToClipboard);
+        clientClipboard.setContents(htmlSelection, null);
 
     }
 
